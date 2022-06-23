@@ -1,6 +1,7 @@
 import 'package:cnc_flutter_app/connections/symptom_db_helper.dart';
 import 'package:cnc_flutter_app/models/symptom_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 import '../alerts.dart';
@@ -189,7 +190,7 @@ class _SymptomTrackingModifyScreenState
             child: TextFormField(
                 initialValue: widget.symptomModel.other,
                 maxLength: 256,
-                maxLengthEnforced: true,
+                maxLengthEnforcement: MaxLengthEnforcement.enforced,
                 onChanged: (value) {
                   widget.symptomModel.other = value;
                 },

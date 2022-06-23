@@ -1,6 +1,7 @@
 import 'package:cnc_flutter_app/connections/symptom_db_helper.dart';
 import 'package:cnc_flutter_app/models/symptom_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -153,7 +154,7 @@ class _SymptomTrackingInputScreenState
                   padding: const EdgeInsets.all(8.0),
                   child: TextField(
                       maxLength: 256,
-                      maxLengthEnforced: true,
+                      maxLengthEnforcement: MaxLengthEnforcement.enforced,
                       onChanged: (value) {
                         widget.symptomModel.other = value;
                       },

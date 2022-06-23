@@ -2,6 +2,7 @@ import 'package:cnc_flutter_app/connections/database.dart';
 import 'package:cnc_flutter_app/models/user_question_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 import '../alerts.dart';
@@ -158,7 +159,7 @@ class _AddQuestionScreen extends State<AddQuestionScreen> {
                           child: TextFormField(
                             style: TextStyle(fontSize: 18),
                             maxLength: 256,
-                            maxLengthEnforced: true,
+                            maxLengthEnforcement: MaxLengthEnforcement.enforced,
                             maxLines: null,
                             minLines: 3,
                             decoration: InputDecoration.collapsed(
@@ -196,7 +197,7 @@ class _AddQuestionScreen extends State<AddQuestionScreen> {
                           child: TextFormField(
                             style: TextStyle(fontSize: 18),
                             maxLength: 1024,
-                            maxLengthEnforced: true,
+                            maxLengthEnforcement: MaxLengthEnforcement.enforced,
                             maxLines: null,
                             minLines: 6,
                             decoration: InputDecoration.collapsed(
