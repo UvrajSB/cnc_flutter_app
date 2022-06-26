@@ -623,11 +623,14 @@ class FoodProfile extends State<FoodPage> {
                               ),
                             )),
                             Expanded(
-                                child: OutlineButton(
-                              borderSide: BorderSide(
-                                  color: Theme.of(context).buttonColor,
-                                  style: BorderStyle.solid,
-                                  width: 2),
+                                child: OutlinedButton(
+                                  style: OutlinedButton.styleFrom(
+                                    shape: StadiumBorder(),
+                                    side: BorderSide(
+                                      width: 2,
+                                      color: Theme.of(context).colorScheme.primary,
+                                    ),
+                                  ),
                               onPressed: () {
                                 showFraction = false;
                                 switched = true;
@@ -644,11 +647,14 @@ class FoodProfile extends State<FoodPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Expanded(
-                                child: OutlineButton(
-                              borderSide: BorderSide(
-                                  color: Theme.of(context).buttonColor,
-                                  style: BorderStyle.solid,
-                                  width: 2),
+                                child: OutlinedButton(
+                                  style: OutlinedButton.styleFrom(
+                                    shape: StadiumBorder(),
+                                    side: BorderSide(
+                                      width: 2,
+                                      color: Theme.of(context).colorScheme.primary,
+                                    ),
+                                  ),
                               onPressed: () {
                                 showFraction = true;
                                 switched = true;
